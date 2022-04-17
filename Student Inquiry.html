@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>SYZYGY</title>
+<link rel="stylesheet" href="header.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<!--header html-->
+
+<center><h1>SYZYGY<h1>
+<h3>Student Management System</h3>
+</center>
+<form method="post" action="login.php" class="loginform">
+<label>Username</label><input name="username" type="text">
+<label>Password</label><input name="password" type="password">
+<input name="login" type="submit" class="submit" value="Login">
+</form>
+
+<form method="post" action="login.php" class="logout">
+<label>Log Out</label> 
+</form>
+<form method="post" action="My Profile.php" class="MyProfile">
+<label>My Profile</label> 
+</form>
+<br>
+<hr>
+<ul>
+	<li><a href = "header.html">Home</a></li>
+	<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Scholarship</a>
+		<div class="dropdown-content">
+			<a href="Apply Scholarship.html">Apply Scholarship</a>
+			<a href="Delete Scholarship Application">Delete Scholarship Application</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Student Information</a>
+		<div class="dropdown-content">
+			<a href="Student Information.html">Student Information</a>
+			<a href="Student Report.html">Student Report</a>
+			<a href="Student Inquiry.html">Student Inquiry</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Car Parking</a>
+		<div class="dropdown-content">
+			<a href="Apply for Car Parking.html">Apply for Car Parking</a>
+			<a href="Car park verification.html">Car park verification</a>
+			<a href="Delete Car Park Membership.html">Delete Car Park Membership </a>
+		</div>
+		</li>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Bank Slip</a>
+		<div class="dropdown-content">
+			<a href="Upload Bank Slip.html">Upload Bank Slip</a>
+			<a href="Edit Bank Slip.html">Edit Bank Slip</a>
+			<a href="View Bank Slip.html">View Bank Slip </a>
+			<a href="Download Bank Slip.html">Download Bank Slip</a>
+			<a href="Delete Bank Slip.html"> Delete Bank Slip</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Assignment</a>
+		<div class="dropdown-content">
+			<a href="Upload Assignment.html">Upload Assignment</a>
+			<a href="Update Assignment.html">Update Assignment</a>
+			<a href="Delete Assignment.html">Delete Assignment</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">library Membership</a>
+		<div class="dropdown-content">
+			<a href="Apply library Membership.html">Apply library Membership</a>
+			<a href="Update Membership.html">Update Membership</a>
+			<a href="Generate Information.html">Generate Information</a>
+			<a href="Delete library Membership.html">Delete library Membership</a>
+		</div>
+</ul>
+
+<!--/header html-->
+
+ 
+ <div class="grid-container">
+  <div>
+  <tr>
+<td>Student Inquiry </td> 
+</tr>
+ </div>
+ 
+ <div class="topnav">
+  <input type="text" placeholder="Search..">
+</div> 
+  <div>Registration No</div>
+    <div class="BranchName"><input type="text" id="Branchname"  placeholder="Xxxxxxxxxx"></div>
+
+  <div>Inquiry</div>
+  
+  <div class="BranchName"><input type="text" id="Branchname"  placeholder="_ _ _ _ _ _ _ _ _ _ _"></div>
+  <div>NIC/Passport</div>
+  
+  <div class="BranchName" ><input type="text" id="Amount"  placeholder="XxxxxxxxxV"></div>  
+  <div>Contact</div>
+	<div class="BranchName"><input type="tel" id="phone" name="phone" placeholder="123-45-678"
+	pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required></div>
+
+	<div>Personal E-mail</div>
+	<div class="BranchName"><input type="email" id="email"  placeholder="Abc@gmail.com"></div>
+  
+  </div>
+  <hr>
+
+
+<button onclick="document.location='Student Inquiry.html'" type ="submit"class="button-center">Clear</button>
+<button onclick="document.location=''"class="button-right">Submit</button>
+ <hr>
+ 
+ <div class="c">
+<h2>Address: No.123, Nugegoda</h2>
+</div>
+  <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</body>
+</html>

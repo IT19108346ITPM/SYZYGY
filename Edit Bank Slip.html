@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>SYZYGY</title>
+<link rel="stylesheet" href="header.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<!--header html-->
+
+<center><h1>SYZYGY<h1>
+<h3>Student Management System</h3>
+</center>
+<form method="post" action="login.php" class="loginform">
+<label>Username</label><input name="username" type="text">
+<label>Password</label><input name="password" type="password">
+<input name="login" type="submit" class="submit" value="Login">
+</form>
+
+<form method="post" action="login.php" class="logout">
+<label>Log Out</label> 
+</form>
+<form method="post" action="My Profile.php" class="MyProfile">
+<label>My Profile</label> 
+</form>
+<br>
+<hr>
+<ul>
+	<li><a href = "header.html">Home</a></li>
+	<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Scholarship</a>
+		<div class="dropdown-content">
+			<a href="Apply Scholarship.html">Apply Scholarship</a>
+			<a href="Delete Scholarship Application">Delete Scholarship Application</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Student Information</a>
+		<div class="dropdown-content">
+			<a href="Student Information.html">Student Information</a>
+			<a href="Student Report.html">Student Report</a>
+			<a href="Student Inquiry.html">Student Inquiry</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Car Parking</a>
+		<div class="dropdown-content">
+			<a href="Apply for Car Parking.html">Apply for Car Parking</a>
+			<a href="Car park verification.html">Car park verification</a>
+			<a href="Delete Car Park Membership.html">Delete Car Park Membership </a>
+		</div>
+		</li>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Bank Slip</a>
+		<div class="dropdown-content">
+			<a href="Upload Bank Slip.html">Upload Bank Slip</a>
+			<a href="Edit Bank Slip.html">Edit Bank Slip</a>
+			<a href="View Bank Slip.html">View Bank Slip </a>
+			<a href="Download Bank Slip.html">Download Bank Slip</a>
+			<a href="Delete Bank Slip.html"> Delete Bank Slip</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Assignment</a>
+		<div class="dropdown-content">
+			<a href="Upload Assignment.html">Upload Assignment</a>
+			<a href="Update Assignment.html">Update Assignment</a>
+			<a href="Delete Assignment.html">Delete Assignment</a>
+		</div>
+		<li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">library Membership</a>
+		<div class="dropdown-content">
+			<a href="Apply library Membership.html">Apply library Membership</a>
+			<a href="Update Membership.html">Update Membership</a>
+			<a href="Generate Information.html">Generate Information</a>
+			<a href="Delete library Membership.html">Delete library Membership</a>
+		</div>
+</ul>
+
+<!--/header html-->
+
+ 
+ <div class="grid-container">
+  <div>
+  <tr>
+<td>Edit </td> 
+</tr>
+ </div>
+ 
+ <div class="topnav">
+  <input type="text" placeholder="Search..">
+</div> 
+  <div>Bank Name</div>
+  <div class="bankName">
+  <select id="Bankname" name="Bankname" type="text">		
+	<option value="Bank of Ceylon">Bank of Ceylon</option>
+	<option value="Commercial Bank ">Commercial Bank</option>
+	<option value="DFCC Bank">DFCC Bank</option>
+	<option value="National Development Bank">National Development Bank</option>
+    <option value="Nations Trust Bank">Nations Trust Bank</option>
+	<option value="Sampath Bank">Sampath Bank</option>
+	<option value="Seylan Bank ">Seylan Bank </option>
+   </select>
+  </div>
+  <div>Branch Name</div>
+  
+  <div class="BranchName"><input type="text" id="Branchname"  placeholder="_ _ _ _ _ _ _ _ _ _ _"></div>
+  <div>Amount</div>
+  
+  <div class="BranchName" ><input type="text" id="Amount"  placeholder="XXXXX.XX"></div>  
+  <div>Date</div>
+  <div class="date_b"><input type="datetime-local" id="birthdaytime" name="birthdaytime"></div>
+  
+  </div>
+  <hr>
+  <div class="raw">
+  <div class="column left" style="padding: 50px 70px">
+		<table>
+			<th><i class="fa fa-file-pdf-o" style="font-size:48px;color:red; padding: 50px" ></i>
+			</th>
+			<th><div class="vl"></div>
+			</th>
+		</table>
+  </div>
+  
+  <div class="column middle" style="padding: 50px 70px">
+  <table >
+  <tr>
+    <th><h1>Size :</h1></th>
+  </tr>
+  <tr>
+    <td><h1>Date : </h1></td>
+  </tr>
+</table>
+  </div>
+  <div class="column right;" style="padding: 50px 70px">
+  
+  <table>
+  <tr>
+    <th> <div class="grid-container-2"><input type="text" id="Amount"  placeholder="XX MB"></div><br></th>
+  </tr>
+  <tr>
+    <td><div class="grid-container-2"><input type="datetime-local" id="birthdaytime" name="birthdaytime"></div></td>
+  </tr>
+ 
+</table>
+  
+  </div>
+
+<button onclick="document.location='Download Bank Slip.html'"class="button-left">Download</button>
+<button onclick="document.location='View Bank Slip'" class="button-center">Update</button>
+<button onclick="document.location='Delete Bank Slip.html'"class="button-right">Delete</button>
+ <hr>
+ 
+ <div class="c">
+<h2>Address: No.123, Nugegoda</h2>
+</div>
+  <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</body>
+</html>
